@@ -1,9 +1,8 @@
-# Why we need a state management tool
-In typical React, the way to handle data between disconnected components is through prop drilling. Since there is no global state that components can access if, for instance, you want to pass data from a top-level component to a fifth-level component, you’ll have to pass the data as a prop on each level of the tree until you get to your desired component.
+# The React Context API
+The new Context API came with React 16.3. Here’s how Context is explained in the React documentation:
 
-This results in writing a ton of extra code, and giving components properties that they will never use also affects their architectural design.
+Context provides a way to pass data through the component tree without having to pass props down manually at every level.
 
-In order to solve this problem, we needed a way to provide a global state that all components, no matter how deeply nested they are, could access.
+The React Context API is React’s way of managing state in multiple components that are not directly connected.
 
-By solving this, Redux — an open-source JavaScript library for managing application state — became the go-to solution for React developers.
-
+To create a context, we’ll use the createContext method from React, which accepts a parameter for its default value:

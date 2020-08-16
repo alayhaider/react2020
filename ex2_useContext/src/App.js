@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
-import Message from './Message';
 import CounterContext from './CounterContext';
+import Message from './Message';
 
 import './App.css';
 
@@ -8,21 +8,28 @@ import './App.css';
 function App() {
 
 
+  
+let[count, setCount] = useState(0);
 
-let[hh, setHH] = useState(0);
-let[mm, setMM] = useState(0);
-let[ss, setSS] = useState(0);
+
+
 
   return (
     <div>
       
-      <CounterContext.Provider hh={hh} mm={mm} ss={ss} >
+      <CounterContext.Provider value={count}>
      <Message />     
      </CounterContext.Provider>
+         
 
-      <button onClick= {() =>setHH(hh+1)}>HH</button>     
-      <button onClick= {() =>setMM(mm+1)}>HH</button>     
-      <button onClick= {() =>setSS(ss+1)}>HH</button>     
+     <button onClick=
+      {
+        () =>setCount(count+1)
+      }>
+        Update Counter       
+      </button>     
+
+  
 
          { /*isMorning ? 'Yes':'No' */}     
 
