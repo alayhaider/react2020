@@ -1,7 +1,4 @@
 # setState
 
-sate is a Hook that allows you to have state variables in functional components.
+This is a way to “preserve” some values between the function calls — useState is a new way to use the exact same capabilities that this. state provides in a class. Normally, variables “disappear” when the function exits but state variables are preserved by React.
 
-There are two types of components in React: class and functional components.
-
-Class components are ES6 classes that extend from React.Component and can have state and lifecycle methods:
