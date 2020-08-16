@@ -7,20 +7,22 @@ import './App.css';
 
 function App() {
 
-let[count, setCount] = useState(10);
+
+
+let[hh, setHH] = useState(0);
+let[mm, setMM] = useState(0);
+let[ss, setSS] = useState(0);
+
   return (
     <div>
-      <h1>React’s Context API and useReducer React Hooks</h1>
-      <CounterContext.Provider value={count}>
-     <Message count={count}/>     
+      
+      <CounterContext.Provider hh={hh} mm={mm} ss={ss} >
+     <Message />     
      </CounterContext.Provider>
 
-      <button onClick=
-      {
-        () =>setCount(count+1)
-      }>
-        Update Counter       
-      </button>     
+      <button onClick= {() =>setHH(hh+1)}>HH</button>     
+      <button onClick= {() =>setMM(mm+1)}>HH</button>     
+      <button onClick= {() =>setSS(ss+1)}>HH</button>     
 
          { /*isMorning ? 'Yes':'No' */}     
 
