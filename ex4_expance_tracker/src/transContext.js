@@ -1,6 +1,4 @@
-import { createContext, useReducer }    from "react"
-
-import TransactionReducer from './transReducer';
+import { createContext }    from "react"
 
 
 
@@ -16,8 +14,6 @@ export const TransactionContext = createContext(initTransactions)
 
 
 
-export const TransactionProvider = ({}) => {
-    let [state, dispatch] = useReducer(TransactionReducer, initTransactions)
-}
+
 
 
